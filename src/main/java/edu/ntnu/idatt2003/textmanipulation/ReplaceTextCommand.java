@@ -11,7 +11,7 @@ public class ReplaceTextCommand implements TextCommand {
 
     @Override
     public String execute(String text) {
-        return text.replaceAll(target, replacement);
+        return text.replace(target, replacement);
     }
 
     public String getTarget() {
