@@ -8,8 +8,7 @@ public class CapitalizeWordsTextCommand extends CapitalizeTextCommand {
     @Override
     public String execute(String text) {
         List<String> words = List.of(text.trim().split("\\s+"));
-        return words.stream().map(
-                word -> word.substring(0, 1).toUpperCase() + word.substring(1))
-                        .collect(Collectors.joining(" "));
+        return words.stream().map(super::execute)
+                .collect(Collectors.joining(" "));
     }
 }
